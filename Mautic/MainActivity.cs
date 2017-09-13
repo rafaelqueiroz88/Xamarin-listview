@@ -37,11 +37,16 @@ namespace Mautic
                 if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
-                    ////MySqlCommand cmd = new MySqlCommand("SELECT leadlist_id FROM lead_lists_leads LIMIT 1");
+                    MySqlCommand cmd = new MySqlCommand("SELECT leadlist_id FROM lead_lists_leads LIMIT 1");
                     //cmd.ExecuteNonQuery();
-                    //mItems = new List<string>();
-                    //mItems.Add(cmd); //Consertar esta lógica
-                    //ArrayAdapter<string> mAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
+                    MySqlDataReader rdr = cmd.ExecuteReader();
+                    mItems = new List<string>();
+                    ArrayAdapter<string> mAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
+                    while (rdr.Read())
+                    {
+                        mAdapter.Add(rdr.ToString());
+                    }
+                    
                     //segmentosLista.Adapter = mAdapter;
                     //tituloLista.Text = "Mautic conectado com sucesso!";
                 }
