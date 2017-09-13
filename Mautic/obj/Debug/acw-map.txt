@@ -1,0 +1,4 @@
+Mautic.MainActivity, Mautic;md5a1e2133f119860e7302294a9f579973c.MainActivity
+Mautic.MainActivity, Mautic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a1e2133f119860e7302294a9f579973c.MainActivity
+Mautic.MainActivity;md5a1e2133f119860e7302294a9f579973c.MainActivity
+mautic.MainActivity;md5a1e2133f119860e7302294a9f579973c.MainActivity
